@@ -899,7 +899,7 @@ A partir da definição dada no enunciado, e aplicando a regra número 52 (Fokki
 
 \right.
 %
-\just\equiv{(split (q d) (split (r d) (c d))) = cata (split h (split k l))}
+\just\equiv{|(split (q d) (split (r d) (c d))) = cata (split h (split k l))|}
 %
 
 %

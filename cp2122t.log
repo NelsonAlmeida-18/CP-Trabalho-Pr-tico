@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.5.27)  12 JUN 2022 03:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.5.27)  12 JUN 2022 09:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,7 +953,7 @@ I'm ignoring a \right that had no matching \left.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -965,7 +965,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -977,7 +977,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -989,7 +989,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1000,7 +1000,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1008,7 +1008,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1016,7 +1016,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1027,7 +1027,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \@xeqncr ...pen \vskip \jot \@vspace@calcify {#1}}
                                                   
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1038,7 +1038,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1050,7 +1050,7 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1058,7 +1058,7 @@ you left one out. Proceed, with fingers crossed.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1070,7 +1070,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1082,7 +1082,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1094,7 +1094,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1106,7 +1106,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1117,7 +1117,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1125,7 +1125,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1133,7 +1133,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1144,7 +1144,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \@xeqncr ...pen \vskip \jot \@vspace@calcify {#1}}
                                                   
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1155,7 +1155,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1167,7 +1167,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1197 ...d) (c d))) = cata (split h (split k l))}
+l.1197 ...arid{h}}{\conj{\Varid{k}}{\Varid{l}}}}}}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -6452,7 +6452,7 @@ Package rerunfilecheck Info: File `cp2122t.out' has not changed.
 Here is how much of TeX's memory you used:
  17274 strings out of 478268
  275542 string characters out of 5836364
- 631819 words of memory out of 5000000
+ 632819 words of memory out of 5000000
  35060 multiletter control sequences out of 15000+600000
  513256 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -6480,28 +6480,29 @@ st/fonts/type1/public/amsfonts/cm/cmss10.pfb></opt/homebrew/Cellar/texlive/2022
 ellar/texlive/20220321/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20220321/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></opt/homebrew/Cellar
-/texlive/20220321/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></o
+nts/type1/public/amsfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20220321/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar
+/texlive/20220321/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></o
 pt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/public/amsfont
-s/latxfont/line10.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/202
-20321/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/hom
-ebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.p
-fb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/urw/helv
-etic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/t
-ype1/urw/palatino/uplb8a.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf
--dist/fonts/type1/urw/palatino/uplbi8a.pfb></opt/homebrew/Cellar/texlive/202203
-21/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></opt/homebrew/Cellar/t
-exlive/20220321/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></opt/home
-brew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.
-pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/public/
-xypic/xyatip10.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/font
-s/type1/public/xypic/xybtip10.pfb>
-Output written on cp2122t.pdf (16 pages, 796796 bytes).
+s/cm/cmti9.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/latxfont/line10.pfb></opt/homebrew/Cellar/texlive/20220321/
+share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/
+Cellar/texlive/20220321/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/ur
+w/courier/ucrr8a.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20220321/share/
+texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></opt/homebrew/Cellar/texlive/20
+220321/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></opt/homebrew/Cel
+lar/texlive/20220321/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></opt
+/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/urw/palatino/upl
+r8a.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/type1/urw
+/palatino/uplri8a.pfb></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/f
+onts/type1/public/xypic/xyatip10.pfb></opt/homebrew/Cellar/texlive/20220321/sha
+re/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on cp2122t.pdf (16 pages, 806437 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
+ 455 PDF objects out of 1000 (max. 8388607)
+ 359 compressed objects within 4 object streams
  63 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
