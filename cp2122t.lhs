@@ -159,7 +159,7 @@ a95696 & Gonçalo da Silva
 \\
 a95021 & Guilherme Oliveira 
 \\
-a97020 & Moisés Pereira 
+a97020 & Moisés Ferreira 
 \end{tabular}
 \end{center}
 
