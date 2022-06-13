@@ -1144,30 +1144,70 @@ both = (alice,bob)
 Biblioteca |LTree3|:
 
 \begin{code}
-inLTree3 = undefined
+inLTree3 = either Tri (uncurry (uncurry Nodo))
 
-outLTree3 (Tri t) = undefined
-outLTree3 (Nodo a b c) =  undefined
+outLTree3 (Tri a) = i1 a
+outLTree3 (Nodo t1 t2 t3) = i2 ((t1,t2),t3)
 
-baseLTree3 f g = undefined
+baseLTree3 g f = g -|- ((f >< f) >< f)
 
-recLTree3 f = undefined
+recLTree3 f = baseLTree3 id f
 
-cataLTree3 f = undefined
+cataLTree3 f = f . (recLTree3 (cataLTree3 f)) . outLTree3
 
-anaLTree3 f = undefined
+anaLTree3 f = inLTree3 . (recLTree3 (anaLTree3 f)) . f
 
-hyloLTree3 f g = undefined
+hyloLTree3 f g = cataLTree3 f . anaLTree3 g
+
 \end{code}
 Genes do hilomorfismo |sierpinski|:
-\begin{code}
-g1 = undefined
 
-g2 (t,0) = undefined
-g2 (((x,y),s),n+1) = i2((t1,t2),t3) where
-     t1 = undefined
-     t2 = undefined
-     t3 = undefined
+Diagrama do catamorfismo:
+
+\begin{eqnarray*}
+\xymatrix@@C=2cm{
+    |LTree3 A|
+           \ar[d]_-{|cataLTree3 g1|}
+           \ar@@/^/[r]^-{|outLTree3|}_-\cong
+&
+    |A + (LTree3 A >< LTree3 A) >< LTree3 A|
+           \ar[d]^{|id + (cataLTree3 >< cataLTree3) >< cataLTree3|}
+           \ar@@/^/[l]^-{|inLTree3|}
+\\
+     |[A]|
+&
+     A + (A^* |><| A^*) |><| A^*
+           \ar[l]^-{|g1|}
+}
+\end{eqnarray*}
+
+Diagrama do anamorfismo:
+
+\begin{eqnarray*}
+\xymatrix@@C=2cm{
+    |LTree3 A|
+           \ar@@/^/[r]^-{|outLTree3|}_-\cong
+&
+    |A + (LTree3 A >< LTree3 A) >< LTree3 A|
+           \ar@@/^/[l]^-{|inLTree3|}
+\\
+     |Tri >< Int|
+           \ar[u]^-{|anaLTree3 g2|}
+           \ar[r]_-{|g2|}
+&
+     |A + ((Tri >< Int) >< (Tri >< Int)) >< (Tri >< Int)|
+           \ar[u]_-{|id + (anaLTree3 >< anaLTree3) >< anaLTree3|}
+}
+\end{eqnarray*}
+
+\begin{code}
+g1 = either singl (uncurry ((++) . (conc)))
+
+g2 (t, 0) = i1 (t)
+g2 (((x, y), s), n+1) = i2 ((t1, t2), t3) where
+    t1 = (((x, y), div s 2), n)
+    t2 = (((x + div s 2, y), div s 2), n)
+    t3 = (((x, y + div s 2), div s 2), n)
 \end{code}
 
 \subsection*{Problema 4}

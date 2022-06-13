@@ -317,7 +317,7 @@ a95696 & Gonçalo da Silva
 \\
 a95021 & Guilherme Oliveira 
 \\
-a97020 & Moisés Pereira 
+a97020 & Moisés Ferreira 
 \end{tabular}
 \end{center}
 
@@ -1448,45 +1448,82 @@ Biblioteca \ensuremath{\mathsf{LTree3}}:
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{27}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{inLTree3}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inLTree3}\mathrel{=}\alt{\Conid{Tri}}{\uncurry{\uncurry{\Conid{Nodo}}}}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{outLTree3}\;(\Conid{Tri}\;\Varid{t})\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{outLTree3}\;(\Conid{Tri}\;\Varid{a})\mathrel{=}i_1\;\Varid{a}{}\<[E]%
 \\
-\>[B]{}\Varid{outLTree3}\;(\Conid{Nodo}\;\Varid{a}\;\Varid{b}\;\Varid{c})\mathrel{=}{}\<[27]%
-\>[27]{}\bot {}\<[E]%
+\>[B]{}\Varid{outLTree3}\;(\Conid{Nodo}\;\Varid{t1}\;\Varid{t2}\;\Varid{t3})\mathrel{=}i_2\;((\Varid{t1},\Varid{t2}),\Varid{t3}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{baseLTree3}\;\Varid{f}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{baseLTree3}\;\Varid{g}\;\Varid{f}\mathrel{=}\Varid{g}+((\Varid{f}\times\Varid{f})\times\Varid{f}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{recLTree3}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{recLTree3}\;\Varid{f}\mathrel{=}\Varid{baseLTree3}\;\Varid{id}\;\Varid{f}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{cataLTree3}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{cataLTree3}\;\Varid{f}\mathrel{=}\Varid{f}\comp (\Varid{recLTree3}\;(\Varid{cataLTree3}\;\Varid{f}))\comp \Varid{outLTree3}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{anaLTree3}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{anaLTree3}\;\Varid{f}\mathrel{=}\Varid{inLTree3}\comp (\Varid{recLTree3}\;(\Varid{anaLTree3}\;\Varid{f}))\comp \Varid{f}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{hyloLTree3}\;\Varid{f}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{hyloLTree3}\;\Varid{f}\;\Varid{g}\mathrel{=}\Varid{cataLTree3}\;\Varid{f}\comp \Varid{anaLTree3}\;\Varid{g}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 Genes do hilomorfismo \ensuremath{\Varid{sierpinski}}:
+
+Diagrama do catamorfismo:
+
+\begin{eqnarray*}
+\xymatrix@C=2cm{
+    \ensuremath{\mathsf{LTree3}\;\Conid{A}}
+           \ar[d]_-{\ensuremath{\Varid{cataLTree3}\;g_1 }}
+           \ar@/^/[r]^-{\ensuremath{\Varid{outLTree3}}}_-\cong
+&
+    \ensuremath{\Conid{A}\mathbin{+}(\mathsf{LTree3}\;\Conid{A}\times\mathsf{LTree3}\;\Conid{A})\times\mathsf{LTree3}\;\Conid{A}}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}(\Varid{cataLTree3}\times\Varid{cataLTree3})\times\Varid{cataLTree3}}}
+           \ar@/^/[l]^-{\ensuremath{\Varid{inLTree3}}}
+\\
+     \ensuremath{[\mskip1.5mu \Conid{A}\mskip1.5mu]}
+&
+     A + (A^* \ensuremath{\times} A^*) \ensuremath{\times} A^*
+           \ar[l]^-{\ensuremath{g_1 }}
+}
+\end{eqnarray*}
+
+Diagrama do anamorfismo:
+
+\begin{eqnarray*}
+\xymatrix@C=2cm{
+    \ensuremath{\mathsf{LTree3}\;\Conid{A}}
+           \ar@/^/[r]^-{\ensuremath{\Varid{outLTree3}}}_-\cong
+&
+    \ensuremath{\Conid{A}\mathbin{+}(\mathsf{LTree3}\;\Conid{A}\times\mathsf{LTree3}\;\Conid{A})\times\mathsf{LTree3}\;\Conid{A}}
+           \ar@/^/[l]^-{\ensuremath{\Varid{inLTree3}}}
+\\
+     \ensuremath{\Conid{Tri}\times\Conid{Int}}
+           \ar[u]^-{\ensuremath{\Varid{anaLTree3}\;g_2 }}
+           \ar[r]_-{\ensuremath{g_2 }}
+&
+     \ensuremath{\Conid{A}\mathbin{+}((\Conid{Tri}\times\Conid{Int})\times(\Conid{Tri}\times\Conid{Int}))\times(\Conid{Tri}\times\Conid{Int})}
+           \ar[u]_-{\ensuremath{\Varid{id}\mathbin{+}(\Varid{anaLTree3}\times\Varid{anaLTree3})\times\Varid{anaLTree3}}}
+}
+\end{eqnarray*}
+
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{6}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{5}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}g_1 \mathrel{=}\bot {}\<[E]%
+\>[B]{}g_1 \mathrel{=}\alt{\Varid{singl}}{\uncurry{((\mathbin{+\!\!\!+})\comp (\mathsf{conc}))}}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}g_2 \;(\Varid{t},\mathrm{0})\mathrel{=}\bot {}\<[E]%
+\>[B]{}g_2 \;(\Varid{t},\mathrm{0})\mathrel{=}i_1\;(\Varid{t}){}\<[E]%
 \\
 \>[B]{}g_2 \;(((\Varid{x},\Varid{y}),\Varid{s}),\Varid{n}\mathbin{+}\mathrm{1})\mathrel{=}i_2\;((\Varid{t1},\Varid{t2}),\Varid{t3})\;\mathbf{where}{}\<[E]%
 \\
-\>[B]{}\hsindent{6}{}\<[6]%
-\>[6]{}\Varid{t1}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\hsindent{5}{}\<[5]%
+\>[5]{}\Varid{t1}\mathrel{=}(((\Varid{x},\Varid{y}),\Varid{s}\div \mathrm{2}),\Varid{n}){}\<[E]%
 \\
-\>[B]{}\hsindent{6}{}\<[6]%
-\>[6]{}\Varid{t2}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\hsindent{5}{}\<[5]%
+\>[5]{}\Varid{t2}\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{s}\div \mathrm{2},\Varid{y}),\Varid{s}\div \mathrm{2}),\Varid{n}){}\<[E]%
 \\
-\>[B]{}\hsindent{6}{}\<[6]%
-\>[6]{}\Varid{t3}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\hsindent{5}{}\<[5]%
+\>[5]{}\Varid{t3}\mathrel{=}(((\Varid{x},\Varid{y}\mathbin{+}\Varid{s}\div \mathrm{2}),\Varid{s}\div \mathrm{2}),\Varid{n}){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
