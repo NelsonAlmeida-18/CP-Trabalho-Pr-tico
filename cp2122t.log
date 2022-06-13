@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.13)  13 JUN 2022 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.13)  13 JUN 2022 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -656,46 +656,51 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 3
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-\openout5 = `cp2122t.ptb'.
+
+LaTeX Warning: Reference `sec:documentacao' on page 1 undefined on input line 3
+43.
 
 \openout5 = `cp2122t.ptb'.
 
 \openout5 = `cp2122t.ptb'.
 
- [1
+\openout5 = `cp2122t.ptb'.
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \openout5 = `cp2122t.ptb'.
 
+
+
+LaTeX Warning: Reference `sec:mr' on page 2 undefined on input line 401.
+
+
+LaTeX Warning: Reference `fig:labirinto' on page 2 undefined on input line 410.
+
+
+
+LaTeX Warning: Reference `fig:labirinto' on page 2 undefined on input line 429.
+
+
 \openout5 = `cp2122t.ptb'.
 
-<cp2122t_media/castor11.png, id=64, 1458.44875pt x 1092.08pt>
+<cp2122t_media/castor11.png, id=29, 1458.44875pt x 1092.08pt>
 File: cp2122t_media/castor11.png Graphic file (type png)
 <use cp2122t_media/castor11.png>
 Package pdftex.def Info: cp2122t_media/castor11.png  used on input line 490.
 (pdftex.def)             Requested size: 273.14923pt x 204.5312pt.
- [2]
-<cp2122t_media/sierpinski1.png, id=82, 1078.0275pt x 1078.0275pt>
+
+LaTeX Warning: Reference `fig:sierp1' on page 2 undefined on input line 499.
+
+
+LaTeX Warning: Reference `fig:sierp2' on page 2 undefined on input line 506.
+
+[2]
+<cp2122t_media/sierpinski1.png, id=44, 1078.0275pt x 1078.0275pt>
 File: cp2122t_media/sierpinski1.png Graphic file (type png)
 <use cp2122t_media/sierpinski1.png>
 Package pdftex.def Info: cp2122t_media/sierpinski1.png  used on input line 510.
 
 (pdftex.def)             Requested size: 182.09486pt x 182.09435pt.
-<cp2122t_media/sierpinski2.png, id=83, 1446.40375pt x 1337.99875pt>
-File: cp2122t_media/sierpinski2.png Graphic file (type png)
-<use cp2122t_media/sierpinski2.png>
-Package pdftex.def Info: cp2122t_media/sierpinski2.png  used on input line 518.
-
-(pdftex.def)             Requested size: 273.14923pt x 252.67078pt.
-\openout5 = `cp2122t.ptb'.
-
-\openout5 = `cp2122t.ptb'.
-
- [3 <./cp2122t_media/castor11.png> <./cp2122t_media/sierpinski1.png>]
-\openout5 = `cp2122t.ptb'.
-
-\openout5 = `cp2122t.ptb'.
-
-\openout5 = `cp2122t.ptb'.
-
-\openout5 =
+<cp2122t_media/sierpinski2.png, id=45, 1446.40375p
