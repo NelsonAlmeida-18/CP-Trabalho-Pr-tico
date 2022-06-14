@@ -309,15 +309,15 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-\textbf{Grupo} nr. & 99 (preencher)
+\textbf{Grupo} nr. & 44 
 \\\hline
-a95652 & Nelson Almeida
+95652 & Nelson Almeida
 \\
-a95696 & Gonçalo da Silva
+95696 & Gonçalo da Silva
 \\
-a95021 & Guilherme Oliveira 
+95021 & Guilherme Oliveira 
 \\
-a97020 & Moisés Ferreira 
+97020 & Moisés Ferreira 
 \end{tabular}
 \end{center}
 
@@ -1426,20 +1426,22 @@ Logo \ensuremath{\Varid{g}\mathrel{=}\alt{g_1 }{g_2 }}
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{7}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{alice}\mathbin{::}\Conid{Ord}\;\Varid{c}\Rightarrow {\LTree}\;\Varid{c}\to \Varid{c}{}\<[E]%
 \\
-\>[B]{}\Varid{alice}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{alice}\;(\Conid{Leaf}\;\Varid{x})\mathrel{=}\Varid{x}{}\<[E]%
+\\
+\>[B]{}\Varid{alice}\;(\Conid{Fork}\;(\Varid{x},\Varid{y}))\mathrel{=}\Varid{umax}\;(\Varid{alice}\;(\Varid{x}),\Varid{alice}\;(\Varid{y})){}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\Varid{bob}\mathbin{::}\Conid{Ord}\;\Varid{c}\Rightarrow {\LTree}\;\Varid{c}\to \Varid{c}{}\<[E]%
 \\
-\>[B]{}\Varid{bob}{}\<[7]%
-\>[7]{}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{bob}\;(\Conid{Leaf}\;\Varid{x})\mathrel{=}\Varid{x}{}\<[E]%
+\\
+\>[B]{}\Varid{bob}\;(\Conid{Fork}\;(\Varid{x},\Varid{y}))\mathrel{=}\Varid{umin}\;(\Varid{bob}\;(\Varid{x}),\Varid{bob}\;(\Varid{y}))\;\mathbf{where}\;\Varid{umin}\mathrel{=}\uncurry{\Varid{min}}{}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\Varid{both}\mathbin{::}\Conid{Ord}\;\Varid{d}\Rightarrow {\LTree}\;\Varid{d}\to (\Varid{d},\Varid{d}){}\<[E]%
 \\
-\>[B]{}\Varid{both}\mathrel{=}(\Varid{alice},\Varid{bob}){}\<[E]%
+\>[B]{}\Varid{both}\mathrel{=}\conj{\Varid{alice}}{\Varid{bob}}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1531,17 +1533,19 @@ Diagrama do anamorfismo:
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{4}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{6}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{20}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{propagate}\mathbin{::}\Conid{Monad}\;\Varid{m}\Rightarrow (\Varid{t}\to \Varid{m}\;\Varid{a})\to [\mskip1.5mu \Varid{t}\mskip1.5mu]\to \Varid{m}\;[\mskip1.5mu \Varid{a}\mskip1.5mu]{}\<[E]%
 \\
 \>[B]{}\Varid{propagate}\;\Varid{f}\mathrel{=}\cataList{\Varid{g}\;\Varid{f}}\;\mathbf{where}{}\<[E]%
 \\
-\>[B]{}\hsindent{4}{}\<[4]%
-\>[4]{}\Varid{g}\;\Varid{f}\mathrel{=}\alt{\bot }{g_2 \;\Varid{f}}{}\<[E]%
+\>[B]{}\hsindent{6}{}\<[6]%
+\>[6]{}\Varid{g}\;\Varid{f}\mathrel{=}\alt{\Varid{return}\comp \Varid{nil}}{g_2 \;\Varid{f}}{}\<[E]%
 \\
-\>[B]{}\hsindent{4}{}\<[4]%
-\>[4]{}g_2 \;\Varid{f}\;(\Varid{a},\Varid{b})\mathrel{=}\bot {}\<[E]%
+\>[B]{}\hsindent{6}{}\<[6]%
+\>[6]{}g_2 \;\Varid{f}\;(\Varid{a},\Varid{b})\mathrel{=}{}\<[20]%
+\>[20]{}\mathbf{do}\;\{\mskip1.5mu \Varid{a1}\leftarrow (\Varid{f}\;\Varid{a});\Varid{x}\leftarrow \Varid{b};\Varid{return}\;(\Varid{a1}\mathbin{:}\Varid{x})\mskip1.5mu\}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1554,10 +1558,12 @@ Diagrama do anamorfismo:
 \>[B]{}\Varid{propagate3}\;\Varid{f}\mathrel{=}\cataList{\Varid{g}\;\Varid{f}}\;\mathbf{where}{}\<[E]%
 \\
 \>[B]{}\hsindent{4}{}\<[4]%
-\>[4]{}\Varid{g}\;\Varid{f}\mathrel{=}\alt{\bot }{g_2 \;\Varid{f}}{}\<[E]%
+\>[4]{}\Varid{g}\;\Varid{f}\mathrel{=}\alt{\Varid{return}\comp \Varid{nil}}{g_2 \;\Varid{f}}{}\<[E]%
 \\
 \>[B]{}\hsindent{4}{}\<[4]%
-\>[4]{}g_2 \;\Varid{f}\;(\Varid{a},\Varid{b})\mathrel{=}\bot {}\<[E]%
+\>[4]{}g_2 \;\Varid{f}\;(\Varid{a},\Varid{b})\mathrel{=}\mathbf{do}\;\{\mskip1.5mu \Varid{a1}\leftarrow (\Varid{bitToBit3}\;\Varid{f}\;\Varid{a});\Varid{x}\leftarrow \Varid{b};\Varid{return}\;(\Varid{a1}\mathbin{:}\Varid{x})\mskip1.5mu\}{}\<[E]%
+\\
+\>[B]{}\Varid{bitToBit3}\;\Varid{f}\;\Varid{a}\mathrel{=}\mathbf{do}\;\{\mskip1.5mu \Varid{x}\leftarrow \Varid{f}\;(\Varid{a},\Varid{a},\Varid{a});\Varid{return}\;(v_3 \;\Varid{x})\mskip1.5mu\}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 A função \ensuremath{\Varid{bflip3}}, a programar a seguir, deverá estender \ensuremath{\Varid{bflip}} aos três bits da entrada:
@@ -1567,7 +1573,7 @@ A função \ensuremath{\Varid{bflip3}}, a programar a seguir, deverá estender \
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{bflip3}\mathbin{::}\Conid{Bit3}\to \fun{Dist}\;\Conid{Bit3}{}\<[E]%
 \\
-\>[B]{}\Varid{bflip3}\;(\Varid{a},\Varid{b},\Varid{c})\mathrel{=}\mathbf{do}\;\{\mskip1.5mu \bot \mskip1.5mu\}{}\<[E]%
+\>[B]{}\Varid{bflip3}\;(\Varid{a},\Varid{b},\Varid{c})\mathrel{=}\mathbf{do}\;\{\mskip1.5mu \Varid{a1}\leftarrow \Varid{bflip}\;\Varid{a};\Varid{b1}\leftarrow \Varid{bflip}\;\Varid{b};\Varid{c1}\leftarrow \Varid{bflip}\;\Varid{c};\Varid{return}\;(\Varid{a1},\Varid{b1},\Varid{c1})\mskip1.5mu\}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 

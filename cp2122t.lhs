@@ -151,15 +151,15 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-\textbf{Grupo} nr. & 99 (preencher)
+\textbf{Grupo} nr. & 44 
 \\\hline
-a95652 & Nelson Almeida
+95652 & Nelson Almeida
 \\
-a95696 & Gonçalo da Silva
+95696 & Gonçalo da Silva
 \\
-a95021 & Guilherme Oliveira 
+95021 & Guilherme Oliveira 
 \\
-a97020 & Moisés Ferreira 
+97020 & Moisés Ferreira 
 \end{tabular}
 \end{center}
 
@@ -1131,13 +1131,15 @@ Logo |g = either g1 g2|
 
 \begin{code}
 alice :: Ord c => LTree c -> c
-alice = undefined
+alice (Leaf x) = x
+alice (Fork (x,y)) = umax(alice(x), alice(y))
 
 bob :: Ord c => LTree c -> c
-bob   = undefined    
+bob (Leaf x) = x
+bob (Fork(x,y)) = umin(bob(x),bob(y)) where umin = uncurry min
 
 both :: Ord d => LTree d -> (d, d)
-both = (alice,bob)
+both = split alice bob
 \end{code}
 
 \subsection*{Problema 3}
@@ -1215,21 +1217,23 @@ g2 (((x, y), s), n+1) = i2 ((t1, t2), t3) where
 \begin{code}
 propagate :: Monad m => (t -> m a) -> [t] -> m [a]
 propagate f = cataList (g f) where
-   g f = either undefined (g2 f)
-   g2 f (a,b) = undefined
+     g f = either (return . nil) (g2 f)
+     g2 f (a,b) =  do { a1 <- (f a) ; x <- b ; return (a1:x) }
 \end{code}
 
 \begin{code}
 propagate3 :: (Monad m) => (Bit3 -> m Bit3) -> [Bit] -> m [Bit]
 propagate3 f = cataList (g f) where
-   g f = either undefined (g2 f)
-   g2 f (a,b) = undefined
+   g f = either (return . nil) (g2 f)
+   g2 f (a,b) = do {a1 <- (bitToBit3 f a) ; x <- b ; return (a1:x) }
+bitToBit3 f a = do { x <- f (a,a,a) ; return (v3 x) }
 \end{code}
 A função |bflip3|, a programar a seguir, deverá estender |bflip| aos três bits da entrada:
 
 \begin{code}
 bflip3 :: Bit3 -> Dist Bit3
-bflip3(a,b,c) = do { undefined } 
+bflip3(a,b,c) = do { a1 <- bflip a ; b1 <- bflip b; c1 <- bflip c; return (a1,b1,c1) } 
+
 
 \end{code}
 
